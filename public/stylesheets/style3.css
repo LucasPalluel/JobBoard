@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+body {
+  margin: 0;
+  padding : 0;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/wallpaper.jpg');
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+header{
+  border-bottom: solid #333333 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* overflow: auto; */
+  text-align: center;
+  height: 150px;
+  background-color: white;
+}
+#titre{
+  font-size: 60px;
+  font-family: 'Permanent Marker', cursive;
+  color: red;
+  /* color : #012571; */
+}
+#pawn_jobs{
+  height: 100%;
+  position: relative;
+  left: -10px;
+}
+.pawn_jobs{
+  position: absolute; top:0%; right: 0%;
+  display: inline-block;
+  height: 150px;
+  width: 15%;
+  overflow: hidden;
+}
+#pawn_jobs2{
+  height: 100%;
+  position: relative;
+  left: -10px;
+}
+.pawn_jobs2{
+  position: absolute; top:0%; left: 0%;
+  display: inline-block;
+  height: 150px;
+  width: 15%;
+  overflow: hidden;
+}
+#sous-titre{
+  font-family: 'Permanent Marker', cursive;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: space-around;
+}
+.container-profil{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 25%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 15px;
+  height: 15%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 15px;
+}
+.applies{
+  border-bottom:  solid 1px;
+}
+.apply-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 15px;
+}
+button{
+  text-decoration: none;
+  border-radius: 5px;
+}
+.apply-submit{
+  float: right;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+textarea{
+  resize: none;
+  width: 100%;
+  height : 100px;
+}
+.second-one{
+  width: 70%;
+}
+.form-container-textarea{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start
+}

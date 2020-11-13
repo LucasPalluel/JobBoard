@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Administration</title>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style4.css' />
+  <link rel="icon" type='image/png' href="/images/logo.png">
+</head>
+<body>
+  <header><br>
+    <div class="pawn_jobs2"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs2"></div>
+    <a href="/" id="titre">Pawn Jobs</a>
+    <div id="sous-titre"><p>Administration page of Pawn Jobs</p></div>
+    <div class="pawn_jobs"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs"></div>
+  </header>
+  <main>
+
+    <div class="admin-container1">
+      <p id="title-users">Users</p>
+      <button class="buttons-admin"><a href="adduser">Add user</a></button>
+      <% for(let user of users) { %>
+        <div class="admin-user-container">
+          <form class="modify-user-form">
+            <input name="userId" type="hidden" value="<%= user.id %>">
+
+            <div class="form-group">
+              <p><label for="name">Name</label></p>
+              <input type="text" class="name" name="name" placeholder="Name" value="<%= user.name %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="firstname">Firstname</label></p>
+              <input type="text" class="firstname" name="firstname" placeholder="Firstname" value="<%= user.firstname %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="username">Username</label></p>
+              <input type="text" class="username" name="username" placeholder="Username" value="<%= user.login %>" required>
+            </div>
+
+            <div class="form-group">
+              <p><label for="email">Email adress</label></p>
+              <input type="email" class="email" name="email" placeholder="Email adress" value="<%= user.email %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="phone">Phone number</label></p>
+              <input type="text" class="phone" name="phone" placeholder="Phone number" value="<%= user.tel %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="birthdate">Birth date</label></p>
+              <input type="date" class="birthdate" name="birthdate" min="1900-01-01" max="2020-01-01" value="<%= user.birthdate %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="city">City</label></p>
+              <input type="text" class="city" name="city" placeholder="City" value="<%= user.city %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="postal">Postal code</label></p>
+              <input type="text" class="postal" name="postal" placeholder="Postal code" value="<%= user.postal_code %>" required>
+            </div>
+            <div class="form-group">
+              <p><label for="street">Street</label></p>
+              <input type="text" class="street" name="street" placeholder="Street" value="<%= user.street %>" required>
+            </div>
+            <br><br>
+            <button type="submit">Modify</button>
+            <button type="button" class="delete-button-user">Delete</button><br><br>
+            <button type="button" onclick="window.location.replace('/changepasswordadmin/<%= user.id %>')">Change password</button>
+            <br><br><br><br>
+          </form>
+        </div>
+        <br><br>
+        <% } %>
+      </div>
+
+      <div class="admin-container2">
+        <p id="title-companies">Companies</p>
+        <button class="buttons-admin"><a href="addcompany">Add company</a></button>
+        <% for(let company of companies) { %>
+          <div class="admin-company-container">
+            <form class="modify-company-form">
+              <input name="companyId" type="hidden" value="<%= company.id %>">
+              <div class="form-group">
+                <p><label for="name">Name</label></p>
+                <input type="text" class="name" name="name" placeholder="Name" value="<%= company.name %>" required>
+              </div>
+              <div class="form-group">
+                <p><label for="description">Description</label></p>
+                <input type="text" class="description" name="description" placeholder="Description" value="<%= company.description %>" required>
+              </div>
+              <div class="form-group">
+                <p><label for="email">Email adress</label></p>
+                <input type="email" class="email" name="email" placeholder="Email adress" value="<%= company.mail %>" required>
+              </div>
+              <div class="form-group">
+                <p><label for="phone">Phone number</label></p>
+                <input type="text" class="phone" name="phone" placeholder="Phone number" value="<%= company.tel %>" required>
+              </div>
+              <div class="form-group">
+                <p><label for="city">City</label></p>
+                <input type="text" class="city" name="city" placeholder="City" value="<%= company.city %>" required>
+              </div>
+              <div class="form-group">
+                <p><label for="postal">Postal code</label></p>
+                <input type="text" class="postal" name="postal" placeholder="Postal code" value="<%= company.postal_code %>" required>
+              </div>
+              <div class="form-group">
+                <p><label for="street">Street</label></p>
+                <input type="text" class="street" name="street" placeholder="Street" value="<%= company.street %>" required>
+              </div>
+              <br><br>
+              <button type="submit">Modify</button>
+              <button type="button" class="delete-button-company">Delete</button>
+              <br><br><br><br>
+            </form>
+          </div>
+          <br><br>
+          <% } %>
+        </div>
+
+        <div class="admin-container3">
+          <p id="title-offer">Offers</p>
+          <button class="buttons-admin"><a href="addoffers">Add offer</a></button>
+          <% for(let offer of offers) { %>
+            <div class="admin-offer-container">
+              <form class="modify-offer-form">
+                <input name="offerId" type="hidden" value="<%= offer.id %>">
+
+                <div class="form-group">
+                  <p><label for="offer">Offer</label></p>
+                  <input type="text" class="offer" name="offer" placeholder="Offer" value="<%= offer.name %>" required>
+                </div>
+                <p><label for="select_enterprise">Company</label></p>
+                <p><select class="" name="select_enterprise"></p>
+                  <% for(let company of companies) { %>
+                    <option value="<%= company.id %>" <% if(company.id === offer.fk_identerprise) { %>selected<%}%>><%= company.name %></option>
+                    <% } %>
+                  </select>
+                <div class="form-group-text-description">
+                  <p><label for="description">Description</label></p>
+                  <textarea name="description" required><%= offer.description %></textarea>
+                </div>
+                <div class="form-group-text-description_full">
+                  <p><label for="description_full">Full description</label></p>
+                  <textarea name="description_full" class="description_full-input" required><%= offer.description_full %></textarea>
+                  </div>
+                <br><br>
+                <button type="submit">Modify</button>
+                <button type="button" class="delete-button-offer">Delete</button>
+                <br><br><br><br>
+              </form>
+            </div>
+            <br><br>
+            <% } %>
+          </div>
+        </main>
+
+        <script type="text/javascript" src="/javascripts/learn.js"></script>
+        <script type="text/javascript" src="/javascripts/administration.js"></script>
+
+      </body>
+      </html>

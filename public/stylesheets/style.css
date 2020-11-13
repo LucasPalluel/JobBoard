@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+body {
+  margin: 0;
+  padding : 0;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow: auto;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.mainPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  width:100%;
+}
+a {
+  color: #00B7FF;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+}
+.description{
+  border: solid 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.nom_entreprise{
+  font-size: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #2869FF;
+}
+.poste{
+  border: solid 1px;
+  font-size:18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.description-window{
+  opacity: 0;
+  height: 0;
+}
+.description_entreprise{
+  position: relative;
+  opacity: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+header{
+  border-bottom: solid #333333 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  height: 150px;
+}
+#titre{
+  font-size: 60px;
+  font-family: 'Permanent Marker', cursive;
+  color: red;
+  /* color : #012571; */
+}
+#pawn_jobs{
+  height: 100%;
+  position: relative;
+  left: -10px;
+}
+.pawn_jobs{
+  position: absolute; top:0%; right: 0%;
+  display: inline-block;
+  height: 150px;
+  width: 15%;
+  overflow: hidden;
+}
+#pawn_jobs2{
+  height: 100%;
+  position: relative;
+  left: -10px;
+}
+.pawn_jobs2{
+  position: absolute; top:0%; left: 0%;
+  display: inline-block;
+  height: 150px;
+  width: 15%;
+  overflow: hidden;
+}
+#sous-titre{
+  font-family: 'Permanent Marker', cursive;
+}
+a{
+  text-decoration: none;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  width:70%;
+  height: 100%;
+  background-image: url('/images/wallpaper.jpg');
+}
+nav{
+  width: 15%;
+  background-color: #012571;
+  color: white;
+  overflow: hidden;
+}
+aside{
+  width: 15%;
+  background-color: #012571;
+  color: white;
+  overflow: hidden;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+.apply{
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #012571;
+  color: white;
+  padding: 2px 6px 2px 6px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-radius: 5px;
+  position: relative; bottom: 10px;
+  margin-right: 15px;
+  float: right;
+}
+.learn{
+  background-color: #012571;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+#menu{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#connexion{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#profil{
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+#logout{
+  margin-right: 15px;
+  float: right;
+}
+.myprofil{
+  display: flex;
+  padding-right: 20px;
+  text-decoration: none;
+  justify-content: flex-end;
+}
+.sign{
+  padding-left: 20px;
+  text-decoration: none;
+}
+.logout-div{
+  margin-top: 70px;
+  width: 100%;
+}
+.apply-div{
+  width: 100%;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popup .popuptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

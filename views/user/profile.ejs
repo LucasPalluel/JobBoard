@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profil</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style3.css' />
+  <link rel="icon" type='image/png' href="/images/logo.png">
+</head>
+<body>
+  <header><br>
+    <div class="pawn_jobs2"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs2"></div>
+    <a href="/" id="titre">Pawn Jobs</a>
+    <div id="sous-titre"><p>Your Pawn Jobs's profil</p></div>
+    <div class="pawn_jobs"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs"></div>
+  </header>
+  <main>
+    <div class="container-profil">
+      <fieldset>
+        <legend>My information</legend>
+
+        <p>Login : <%= login %></p>
+        <p>Name : <%= name %></p>
+        <p>Firstname : <%= firstname %></p>
+        <p>Email : <%= email %></p>
+        <p>Tel : <%= tel %></p>
+        <p>Street : <%= street %></p>
+        <p>City : <%= city %></p>
+        <p>Postal : <%= postal %></p>
+        <p>Birthdate : <%= birthdate %></p>
+
+      </fieldset>
+      <br><button><a href="/modifyprofil">Modify</a></button><br>
+        <button><a href="/changepassword">Change password</a></button>
+    </div>
+
+
+    <div class="container">
+      <fieldset>
+        <legend>My applies</legend>
+        <% for(let apply of applys) {%>
+          <div class="applies">
+            <p>Enterprise : <%= apply.name_enterprise %></p>
+            <p>Offer description : <%= apply.offers_description %></p>
+            <p>Content you've send : <%= apply.mail_content %></p>
+            <p> Date : <%= apply.date%></p>
+          </div>
+          <% } %>
+        </fieldset>
+      </div>
+      <br><br>
+    </main>
+  </div>
+</body>
+</html>

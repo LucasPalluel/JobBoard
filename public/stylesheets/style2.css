@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+body {
+  margin: 0;
+  padding : 0;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow: auto;
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/wallpaper.jpg');
+}
+a {
+  color: #00B7FF;
+}
+header{
+  border-bottom: solid #333333 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* overflow: auto; */
+  text-align: center;
+  height: 150px;
+  background-color: white;
+}
+#titre{
+  font-size: 60px;
+  font-family: 'Permanent Marker', cursive;
+  color: red;
+  /* color : #012571; */
+}
+#pawn_jobs{
+  height: 100%;
+  position: relative;
+  left: -10px;
+}
+.pawn_jobs{
+  position: absolute; top:0%; right: 0%;
+  display: inline-block;
+  height: 150px;
+  width: 15%;
+  overflow: hidden;
+}
+#pawn_jobs2{
+  height: 100%;
+  position: relative;
+  left: -10px;
+}
+.pawn_jobs2{
+  position: absolute; top:0%; left: 0%;
+  display: inline-block;
+  height: 150px;
+  width: 15%;
+  overflow: hidden;
+}
+#sous-titre{
+  font-family: 'Permanent Marker', cursive;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+button{
+  text-decoration: none;
+  border-radius: 5px;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+}
+.signin-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 25%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 15px;
+}
+.signin-button-div{
+  width: 100%;
+}
+.signin-button{
+  float: right;
+  margin-right: 20px;
+}
+.signup-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 25px;
+}
+.changepassword-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 20%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 25px;
+}
+.add-user-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 25px;
+}
+.password-button-div{
+  width: 100%;
+  height: 100%;
+}
+.password-button{
+  float: right;
+  margin-top: 40px;
+}
+.signup-button-div{
+  width: 100%;
+  height: 100%;
+}
+.signup-button{
+  float: right;
+  margin-top: 40px;
+}
+.add-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 25px;
+}
+.offers-submit{
+  float: right;
+  margin-top: 40px;
+}
+#not-registered{
+  color: #0000EE;
+}
+.confirm-message{
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+}
+.submit{
+  float: right;
+  margin-top: 40px;
+}
+textarea {
+  resize: none;
+  width: 100%;
+}
+.description_full-input{
+  height: 100px;
+  width: 100%;
+}
+form{
+  width: 100%;
+}
+.enter-mail-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  border : solid 1px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #808080;
+  background-color: white;
+  margin-top: 5%;
+  padding: 25px;
+}
+.mail-button-div{
+  float: right;
+  margin-top: 40px;
+}
+.enter-email{
+  width: 100%;
+}
+.mail-sent{
+  text-align: center;
+}
+#password-forget{
+  color: #0000EE;
+}

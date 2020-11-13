@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modify profil</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style2.css' />
+  <link rel="icon" type='image/png' href="/images/logo.png">
+</head>
+<body>
+  <header><br>
+    <div class="pawn_jobs2"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs2"></div>
+    <a href="/" id="titre">Pawn Jobs</a>
+    <div id="sous-titre"><p>Modify your Pawn Jobs's profil</p></div>
+    <div class="pawn_jobs"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs"></div>
+  </header>
+  <main>
+    <div class="add-user-container">
+      <div class="first-one">
+        <form action="/modifyprofil" method="post">
+          <div class="form-group">
+            <p><label for="username">Username</label></p>
+            <input type="text" class="username" name="username" placeholder="Username" value="<%= login %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="name">Name</label></p>
+            <input type="text" class="name" name="name" placeholder="Name" value="<%= name %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="firstname">Firstname</label></p>
+            <input type="text" class="firstname" name="firstname" placeholder="Firstname" value="<%= firstname %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="email">Email adress</label></p>
+            <input type="email" class="email" name="email" id="mail" placeholder="Email adress" value="<%= email %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="confirmemail">Confirm email adress</label></p>
+            <input type="email" class="confirmemail" name="confirmemail" id="confirmemail" placeholder="Confirm email adress" value="<%= email %>" required>
+            <span id="confirm-message1" class="confirm-message"></span>
+          </div>
+        </div>
+        <div class="first-one">
+          <div class="form-group">
+            <p><label for="phone">Phone number</label></p>
+            <input type="text" class="phone" name="phone" placeholder="Phone number" value="<%= tel %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="birthdate">Birth date</label></p>
+            <input type="date" class="birthdate" name="birthdate" min="1900-01-01" max="2020-01-01" value="<%= birthdate %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="city">City</label></p>
+            <input type="text" class="city" name="city" placeholder="City" value="<%= city %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="postal">Postal code</label></p>
+            <input type="text" class="postal" name="postal" placeholder="Postal code" value="<%= postal %>" required>
+          </div>
+          <div class="form-group">
+            <p><label for="street">Street</label></p>
+            <input type="text" class="street" name="street" placeholder="Street" value="<%= street %>" required>
+          </div>
+          <button type="submit" class="submit">Modify</button>
+        </form>
+      </div>
+    </div>
+    </main>
+    <!-- <script src = "/javascripts/checkingpassword.js"></script> -->
+  </body>
+  </html>

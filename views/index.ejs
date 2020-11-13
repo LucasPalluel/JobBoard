@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pawn Jobs</title>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="icon" type='image/png' href="/images/logo.png">
+</head>
+<body>
+  <header><br>
+    <div class="pawn_jobs2"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs2"></div>
+    <a href="/" id="titre">Pawn Jobs</a>
+    <div id="sous-titre"><p>Welcome to Pawn Jobs</p></div>
+    <div class="pawn_jobs"><img src="/images/pawn_jobs.png" alt="super logo" id="pawn_jobs"></div>
+  </header>
+  <div class="mainPage">
+    <nav>
+      <% if(userId != undefined && isAdmin == 1) {%>
+        <p id="menu">Menu</p>
+        <p><a href="/administration" class="sign">Administration</a></p>
+        <%}%>
+      </nav>
+      <main>
+        <br><br><br><br>
+        <% for(let job of jobs) { %>
+          <div class="container">
+            <div class="poste">
+              <p><%= job.offername %></p>
+              <div class="popup">
+                <p class="nom_entreprise"><%= job.name %></p>
+                <span class="popuptext" class="myPopup"><%= job.descr%></span>
+              </div>
+            </div>
+            <div class="description">
+              <p><%= job.description %></p>
+              <div class="apply-div">
+                <% if(userId != undefined) {%>
+                  <a href='<%= "/apply/" + job.id%>' class="apply" >Apply</a>
+                  <%} else {%>
+                    <a href='<%= "/unconnectedapply/" + job.id%>' class="apply" >Apply</a>
+                    <% } %>
+                  </div>
+                </div>
+
+                <button class="learn" data-jobid='<%= job.id %>'>Learn more </button>
+                <div class="description-window">
+                  <p class="description_entreprise"></p>
+                </div>
+              </div><br><br>
+              <% } %>
+            </main>
+            <aside>
+              <% if(userId === undefined) {%>
+                <p id="connexion">Connexion</p>
+                <p><a href="/signin" class="sign">Sign in</a></p>
+                <p><a href="/signup" class="sign">Sign up</a></p>
+                <% }else{ %>
+                  <p id="profil">Information</p>
+                  <p><a href="/profile" class="myprofil">My profil</a></p>
+                  <form method="get" action="/logout">
+                    <div class="logout-div">
+                      <button id="logout">Logout</button>
+                    </div>
+                  </form>
+                  <% } %>
+                </aside>
+                <script type="text/javascript" src="/javascripts/learn.js"></script>
+                <script type="text/javascript" src="/javascripts/infos.js"></script>
+            </div>
+          </body>
+          </html>
